@@ -15,7 +15,7 @@ Fonts used in Discord:
 Import stylesheet
 
 ```css
-@import url(https://itspi3141.github.io/discord-fonts/fonts.css);
+@import url(https://itspi3141.github.io/discord-fonts/font.css);
 ```
 
 Usage example
