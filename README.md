@@ -9,6 +9,7 @@ Fonts used in Discord:
 - `Source Code Pro`
 - `Corinthia`
 - `Fraunces`
+- `Urfa` (NITRO logo)
 
 ## How to use
 

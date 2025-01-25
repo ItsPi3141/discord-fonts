@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Discord fonts sample</title>
+
+		<link rel="stylesheet" href="font.css" />
+		<style>
+			body {
+				background: #2d2d32;
+				color: #fff;
+				padding: 0.5em;
+				font-size: 2em;
+				font-family: "gg sans", sans-serif;
+			}
+			h3 {
+				margin-bottom: 0.125em;
+			}
+			.fonts {
+				background: #28282d;
+				padding: 1em;
+				border-radius: 0.25em;
+				border: #9898a02a 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fonts"></div>
+
+		<script>
+			const fonts = [
+				{
+					name: "ABC Ginto Nord",
+					weights: [800],
+					styles: ["normal", "italic"],
+				},
+				{
+					name: "gg sans",
+					weights: [400, 500, 600, 700, 800],
+					styles: ["normal", "italic"],
+				},
+				{
+					name: "Noto Sans",
+					weights: [400, 500, 600, 700, 800],
+					styles: ["normal", "italic"],
+				},
+				{
+					name: "Source Code Pro",
+					weights: [400, 700],
+					styles: ["normal"],
+				},
+				{
+					name: "Source Code Pro",
+					weights: [400],
+					styles: ["normal"],
+				},
+				{
+					name: "Corinthia",
+					weights: [400],
+					styles: ["normal"],
+				},
+				{
+					name: "Fraunces",
+					weights: [300, 800],
+					styles: ["normal"],
+				},
+				{
+					name: "Urfa",
+					weights: [800],
+					styles: ["italic"],
+				},
+			];
+
+			const fontsElement = document.getElementById("fonts");
+			fontsElement.innerHTML = fonts
+				.map((font) => {
+					let html = "<h3 style='font-weight:400'>" + font.name + "</h3><div class='fonts'>";
+					for (const weight of font.weights) {
+						for (const style of font.styles) {
+							html += `<div class="font" style="font-family: '${font.name}', sans-serif; font-weight: ${weight}; font-style: ${style};">The quick brown fox jumps over the lazy dog</div>`;
+						}
+					}
+					html += "</div>";
+					return html;
+				})
+				.join("");
+		</script>
+	</body>
+</html>
